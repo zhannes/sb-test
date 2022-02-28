@@ -62,7 +62,7 @@
     "build-storybook": "build-storybook -s public",
     "build-lib": "rollup -c",
     "build-components": "rm -rf dist && NODE_ENV=production babel src/index.js --out-dir dist --copy-files",
-    "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN",
+    "chromatic": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}",
     "link-local-components": "npm run build-lib; npm link;",
     "unlink-local-components": "npm i",
     "link:publish-for-testing": "NODE_ENV=production npm run build-lib && yalc push",
