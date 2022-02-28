@@ -20,3 +20,8 @@ export const Primary = Template.bind({});
 Primary.args = {
   children: "test",
 };
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: "test",
+  disabled: true,
+};

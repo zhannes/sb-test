@@ -28,10 +28,12 @@ export const ThemeProviderComponent = ({ children }) => {
   return <ThemeProvider theme={defaultTheme}>{children}</ThemeProvider>;
 };
 
-export function BasicButton({ children }) {
+export function BasicButton({ children, ...props }) {
   return (
     <Stack spacing={2} direction="row">
-      <Button variant="outlined">{children}</Button>
+      <Button variant="outlined" {...props}>
+        {children}
+      </Button>
     </Stack>
   );
 }
