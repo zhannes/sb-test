@@ -1,4 +1,3 @@
-//import ThemeExample from "./stories/ThemeExample";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import createTheme from "@mui/material/styles/createTheme";
 
@@ -14,8 +13,8 @@ export const theme = {
         // Name of the slot
         root: {
           // Some CSS
-          backgroundColor: "white",
-          color: "red",
+          backgroundColor: "grey",
+          color: "black",
           border: "solid 1px orange",
         },
       },
@@ -27,6 +26,9 @@ const defaultTheme = createTheme(theme); // or your custom theme
 export const ThemeProviderComponent = ({ children }) => {
   return <ThemeProvider theme={defaultTheme}>{children}</ThemeProvider>;
 };
+
+export const SharedThemeProvider = ThemeProvider;
+export const sharedCreateTheme = createTheme;
 
 export function BasicButton({ children, ...props }) {
   return (
